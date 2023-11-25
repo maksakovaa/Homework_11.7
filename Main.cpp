@@ -24,7 +24,7 @@ string file9 = "_part9";
 string file10 = "_part10";
 
 ////////////////////////////////////////////
-////////// Механизм сортировки /////////////
+////////// РњРµС…Р°РЅРёР·Рј СЃРѕСЂС‚РёСЂРѕРІРєРё /////////////
 ////////////////////////////////////////////
 
 static void swap(int* a, int* b)
@@ -62,7 +62,7 @@ static void quickSort(int* arr, int low, int high)
 
 //////////////////////////////////////////
 
-static void write_file(const string& filename, const int* arr, const int n) //Запись массива в файл
+static void write_file(const string& filename, const int* arr, const int n) //Р—Р°РїРёСЃСЊ РјР°СЃСЃРёРІР° РІ С„Р°Р№Р»
 {
 	fstream fs;
 	fs.open(filename, fstream::out);
@@ -79,7 +79,7 @@ static void write_file(const string& filename, const int* arr, const int n) //За
 	}
 }
 
-static void write_parts(const string& filename, int n) //Запись значения в файл
+static void write_parts(const string& filename, int n) //Р—Р°РїРёСЃСЊ Р·РЅР°С‡РµРЅРёСЏ РІ С„Р°Р№Р»
 {
 	fstream tempfs;
 	tempfs.open(filename, fstream::out | fstream::app);
@@ -87,7 +87,7 @@ static void write_parts(const string& filename, int n) //Запись значения в файл
 	tempfs.close();
 }
 
-static void readAndSplit(const string& filename) //Распределение значений между пределами, вызов записи в соответствующий файл
+static void readAndSplit(const string& filename) //Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ Р·РЅР°С‡РµРЅРёР№ РјРµР¶РґСѓ РїСЂРµРґРµР»Р°РјРё, РІС‹Р·РѕРІ Р·Р°РїРёСЃРё РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№ С„Р°Р№Р»
 {
 	fstream fs;
 	fs.open(filename, fstream::in);
@@ -152,14 +152,14 @@ static void readAndSplit(const string& filename) //Распределение значений между 
 	}
 }
 
-static int genInteger() //генератор случайных чисел
+static int genInteger() //РіРµРЅРµСЂР°С‚РѕСЂ СЃР»СѓС‡Р°Р№РЅС‹С… С‡РёСЃРµР»
 {
 	int left_border = 5;
 	int range_len = 995;
 	return left_border + rand() % range_len;
 }
 
-int countData(const string& filename) //Функция вычисляющая количество значений в файле
+int countData(const string& filename) //Р¤СѓРЅРєС†РёСЏ РІС‹С‡РёСЃР»СЏСЋС‰Р°СЏ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·РЅР°С‡РµРЅРёР№ РІ С„Р°Р№Р»Рµ
 {
 	cout << "Count data for " << filename << "..." << endl;
 	fstream tempfs;
@@ -179,7 +179,7 @@ int countData(const string& filename) //Функция вычисляющая количество значений 
 	return counter;
 }
 
-void sortAndCombine() //Функция выполняющая сортировку и запись отсортированных данных в файл
+void sortAndCombine() //Р¤СѓРЅРєС†РёСЏ РІС‹РїРѕР»РЅСЏСЋС‰Р°СЏ СЃРѕСЂС‚РёСЂРѕРІРєСѓ Рё Р·Р°РїРёСЃСЊ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹С… РґР°РЅРЅС‹С… РІ С„Р°Р№Р»
 {
 	cout << "Sort and combine..." << endl;
 	for (int i = 1; i <= 10; i++)
@@ -212,7 +212,7 @@ void sortAndCombine() //Функция выполняющая сортировку и запись отсортированных 
 	}
 }
 
-void printData(const string& filename) //Функция выводящая содерэимое файла на экран
+void printData(const string& filename) //Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґСЏС‰Р°СЏ СЃРѕРґРµСЂСЌРёРјРѕРµ С„Р°Р№Р»Р° РЅР° СЌРєСЂР°РЅ
 {
 	fstream fs;
 	fs.open(filename, fstream::in);
